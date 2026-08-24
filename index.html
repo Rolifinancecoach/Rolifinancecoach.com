@@ -213,6 +213,7 @@ display:flex;align-items:center;justify-content:center;font-size:3rem;}
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#programs">Programs</a></li>
+      <li><a href="#resources">Resources</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="https://cal.com/roli-finance-coach" class="nav-cta" target="_blank" rel="noopener">Book a Call</a></li>
     </ul>
@@ -225,6 +226,7 @@ display:flex;align-items:center;justify-content:center;font-size:3rem;}
   <a href="#about" onclick="toggleMenu()">About</a>
   <a href="#services" onclick="toggleMenu()">Services</a>
   <a href="#programs" onclick="toggleMenu()">Programs</a>
+  <a href="#resources" onclick="toggleMenu()">Resources</a>
   <a href="#blog" onclick="toggleMenu()">Blog</a>
   <a href="#contact" onclick="toggleMenu()">Book a Call</a>
 </div>
@@ -357,6 +359,128 @@ display:flex;align-items:center;justify-content:center;font-size:3rem;}
 <!-- FINANCIAL BLIND SPOT SCORECARD - PASTE THIS   -->
 <!-- SECTION between #programs and #freeguide      -->
 <!-- ============================================= -->
+<!-- ============================================= -->
+<!-- RESOURCES HUB - overview linking to all 7      -->
+<!-- resources. Place this section BEFORE the      -->
+<!-- #scorecard section (so it's the first thing   -->
+<!-- visitors reach when clicking "Resources" in    -->
+<!-- the nav), or wherever makes sense as a menu.   -->
+<!-- ============================================= -->
+<section id="resources">
+  <p class="section-tag">Free Tools & Resources</p>
+  <h2>Your Financial<br/>Resource Library</h2>
+  <p class="section-intro">Everything you need to get clarity on your money — free calculators, guides, and tools. Click any card to jump straight to it.</p>
+
+  <div class="res-hub-grid">
+    <a href="#scorecard" class="res-hub-card">
+      <div class="res-hub-icon">🧭</div>
+      <h3>Financial Blind Spot Scorecard</h3>
+      <p>12 questions to reveal where your money might be leaking.</p>
+    </a>
+    <a href="#investment-calculator" class="res-hub-card">
+      <div class="res-hub-icon">📈</div>
+      <h3>Investment Growth Calculator</h3>
+      <p>See how your money compounds over time.</p>
+    </a>
+    <a href="#time-value-calculator" class="res-hub-card">
+      <div class="res-hub-icon">⏳</div>
+      <h3>Time Value of Money Calculator</h3>
+      <p>See what inflation does to your purchasing power.</p>
+    </a>
+    <a href="#fhsa-guide" class="res-hub-card">
+      <div class="res-hub-icon">🏠</div>
+      <h3>FHSA Guide</h3>
+      <p>How the First Home Savings Account works.</p>
+    </a>
+    <a href="#starter-guide" class="res-hub-card">
+      <div class="res-hub-icon">📘</div>
+      <h3>Canadian Financial Starter Guide</h3>
+      <p>Your first steps to financial clarity in Canada.</p>
+    </a>
+    <a href="#budget-template" class="res-hub-card">
+      <div class="res-hub-icon">📊</div>
+      <h3>Simple Budget Template</h3>
+      <p>An easy monthly income & expense tracker.</p>
+    </a>
+    <a href="#cashflow-kit" class="res-hub-card">
+      <div class="res-hub-icon">💰</div>
+      <h3>5-Day Cash Flow Rescue Kit</h3>
+      <p>Find your money leaks and fix them in 5 days.</p>
+    </a>
+  </div>
+
+  <!-- GET EVERYTHING AT ONCE -->
+  <div class="calc-container" style="max-width:600px;">
+    <div class="calc-gate" id="rg-gate-all">
+      <div class="calc-gate-icon">🎁</div>
+      <h3>Want Everything At Once?</h3>
+      <p>Enter your email once to unlock links to all 7 free tools and resources above.</p>
+      <form onsubmit="return rgAllSubmit(event)">
+        <input type="email" id="rg-email-all" class="calc-gate-email" placeholder="Your email address" required/>
+        <button type="submit" class="calc-btn-primary" id="rg-btn-all">Get All Free Resources →</button>
+      </form>
+      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+    </div>
+    <div class="rg-result" id="rg-result-all" style="display:none;">
+      <div class="calc-gate-icon">✅</div>
+      <h3>You're In!</h3>
+      <p>Here's quick access to everything:</p>
+      <div class="res-hub-linklist">
+        <a href="#scorecard">🧭 Financial Blind Spot Scorecard →</a>
+        <a href="#investment-calculator">📈 Investment Growth Calculator →</a>
+        <a href="#time-value-calculator">⏳ Time Value of Money Calculator →</a>
+        <a href="#fhsa-guide">🏠 FHSA Guide →</a>
+        <a href="#starter-guide">📘 Canadian Financial Starter Guide →</a>
+        <a href="#budget-template">📊 Simple Budget Template →</a>
+        <a href="#cashflow-kit">💰 5-Day Cash Flow Rescue Kit →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.res-hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin:3rem 0;}
+.res-hub-card{background:var(--white);border:1.5px solid #e8e8f0;border-radius:14px;padding:1.8rem;text-decoration:none;display:block;transition:all .25s;}
+.res-hub-card:hover{border-color:var(--coral);box-shadow:0 12px 32px rgba(232,97,74,0.12);transform:translateY(-3px);}
+.res-hub-icon{font-size:2rem;margin-bottom:0.8rem;}
+.res-hub-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;}
+.res-hub-card p{font-size:0.88rem;color:var(--muted);line-height:1.5;margin:0;}
+
+.res-hub-linklist{display:flex;flex-direction:column;gap:0.7rem;text-align:left;}
+.res-hub-linklist a{background:var(--cream);border-radius:8px;padding:0.8rem 1.1rem;color:var(--navy);text-decoration:none;font-weight:600;font-size:0.92rem;transition:background .2s;}
+.res-hub-linklist a:hover{background:var(--coral-pale);color:var(--coral);}
+</style>
+
+<script>
+// === "GET EVERYTHING" GATE (Resource Library Leads group) ===
+function rgAllSubmit(event) {
+  event.preventDefault();
+  const email = document.getElementById('rg-email-all').value.trim();
+  const btn = document.getElementById('rg-btn-all');
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+
+  const formData = new URLSearchParams();
+  formData.append('fields[email]', email);
+  formData.append('ml-submit', '1');
+  formData.append('anticsrf', 'true');
+
+  fetch('https://assets.mailerlite.com/jsonp/2556872/forms/196532794742015035/subscribe', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: formData.toString()
+  }).catch(() => {})
+    .finally(() => {
+      document.getElementById('rg-gate-all').style.display = 'none';
+      document.getElementById('rg-result-all').style.display = 'block';
+    });
+  return false;
+}
+</script>
+<!-- ============ END RESOURCES HUB ============ -->
+
+
 <section id="scorecard">
   <p class="section-tag">Free Interactive Tool</p>
   <h2>Are You Accidentally Sabotaging<br/>Your Financial Future?</h2>
@@ -655,6 +779,543 @@ function fbsRestart() {
 </script>
 <!-- ============ END SCORECARD SECTION ============ -->
 
+<!-- ============================================= -->
+<!-- INVESTMENT PORTFOLIO GROWTH CALCULATOR (v2)    -->
+<!-- WITH EMAIL GATE - REPLACES the previous        -->
+<!-- investment-calculator-snippet.html entirely    -->
+<!-- ============================================= -->
+<section id="investment-calculator">
+  <p class="section-tag">Free Interactive Tool</p>
+  <h2>Investment Portfolio<br/>Growth Calculator</h2>
+  <p class="section-intro">See how your money grows over time using compound interest — combining a lump-sum deposit with regular monthly contributions.</p>
+
+  <div class="calc-container">
+
+    <!-- EMAIL GATE -->
+    <div class="calc-gate" id="ic-gate">
+      <div class="calc-gate-icon">🔒</div>
+      <h3>Unlock the Investment Calculator</h3>
+      <p>Enter your email for instant free access to this tool.</p>
+      <form onsubmit="return icGateSubmit(event)">
+        <input type="email" id="ic-gate-email" class="calc-gate-email" placeholder="Your email address" required/>
+        <button type="submit" class="calc-btn-primary" id="ic-gate-btn">Unlock Calculator →</button>
+      </form>
+      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+    </div>
+
+    <!-- CALCULATOR (hidden until email submitted) -->
+    <div id="ic-tool" style="display:none;">
+      <div class="calc-grid">
+        <!-- INPUTS -->
+        <div class="calc-inputs">
+          <h3 class="calc-panel-title">Your Inputs</h3>
+          <div class="calc-field">
+            <label>Initial Contribution ($)</label>
+            <input type="number" id="ic-initial" value="1000" min="0" oninput="icCalculate()">
+          </div>
+          <div class="calc-field">
+            <label>Monthly Contribution ($)</label>
+            <input type="number" id="ic-monthly" value="500" min="0" oninput="icCalculate()">
+          </div>
+          <div class="calc-field">
+            <label>Investment Duration (Years)</label>
+            <input type="number" id="ic-duration" value="20" min="1" max="50" oninput="icCalculate()">
+          </div>
+          <div class="calc-field">
+            <label>Expected Annual Return (%)</label>
+            <input type="number" id="ic-return" value="7" min="0" max="30" step="0.1" oninput="icCalculate()">
+            <span class="calc-hint">Historical market avg ~7%</span>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="calc-results">
+          <h3 class="calc-panel-title">Your Results</h3>
+          <div class="calc-result-row">
+            <span>Total Contributions Made</span>
+            <strong id="ic-total-contrib">$0</strong>
+          </div>
+          <div class="calc-result-row calc-result-highlight">
+            <span>Future Portfolio Value</span>
+            <strong id="ic-future-value">$0</strong>
+          </div>
+          <div class="calc-result-row">
+            <span>Total Interest Earned</span>
+            <strong id="ic-interest">$0</strong>
+          </div>
+          <div class="calc-result-row">
+            <span>Return on Investment</span>
+            <strong id="ic-roi">0%</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTION TABLE -->
+      <h3 class="calc-panel-title" style="margin-top:2rem;">Year-by-Year Projection</h3>
+      <div class="calc-table-wrap">
+        <table class="calc-table" id="ic-table">
+          <thead>
+            <tr><th>Year</th><th>Annual Contribution</th><th>Cumulative Contributed</th><th>Portfolio Value</th><th>Interest Earned</th></tr>
+          </thead>
+          <tbody id="ic-table-body"></tbody>
+        </table>
+      </div>
+
+      <div class="calc-cta">
+        <p>Want a personalized investment strategy built around your goals?</p>
+        <a href="https://cal.com/roli-finance-coach" target="_blank" rel="noopener" class="calc-cta-btn">Book a Free Consultation →</a>
+      </div>
+      <p class="calc-disclaimer">For illustrative purposes only. Returns are not guaranteed. Contact rolifinancecoach@gmail.com for personalized advice.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* === SHARED CALCULATOR + GATE STYLES (used by both calculators) === */
+.calc-container{max-width:900px;margin:3rem auto 0;background:var(--cream);border-radius:20px;padding:2.5rem;box-shadow:0 8px 40px rgba(11,31,58,0.08);}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.calc-panel-title{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--navy);margin-bottom:1.2rem;}
+.calc-field{margin-bottom:1.2rem;}
+.calc-field label{display:block;font-size:0.85rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem;}
+.calc-field input{width:100%;padding:0.75rem 1rem;border:1.5px solid #cfe0f5;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.95rem;color:#1a4d8f;font-weight:600;outline:none;box-sizing:border-box;background:#eef5ff;}
+.calc-field input:focus{border-color:var(--coral);}
+.calc-hint{font-size:0.78rem;color:var(--muted);display:block;margin-top:0.3rem;}
+
+.calc-results{background:var(--white);border-radius:14px;padding:1.5rem;}
+.calc-result-row{display:flex;justify-content:space-between;align-items:center;padding:0.7rem 0;border-bottom:1px solid #eee;font-size:0.9rem;color:var(--text);}
+.calc-result-row:last-child{border-bottom:none;}
+.calc-result-row strong{color:var(--navy);font-size:1rem;}
+.calc-result-highlight{background:var(--coral-pale);border-radius:8px;padding:0.9rem 0.8rem;margin:0.3rem 0;}
+.calc-result-highlight strong{color:var(--coral);font-size:1.2rem;}
+
+.calc-table-wrap{overflow-x:auto;border-radius:10px;border:1px solid #e8e0d8;}
+.calc-table{width:100%;border-collapse:collapse;font-size:0.85rem;white-space:nowrap;}
+.calc-table th{background:var(--navy);color:var(--white);padding:0.7rem 1rem;text-align:right;font-weight:700;position:sticky;top:0;}
+.calc-table th:first-child{text-align:left;}
+.calc-table td{padding:0.6rem 1rem;text-align:right;border-bottom:1px solid #eee;color:var(--text);}
+.calc-table td:first-child{text-align:left;font-weight:600;color:var(--navy);}
+.calc-table tbody tr:nth-child(even){background:#faf8f4;}
+
+.calc-cta{background:var(--coral);border-radius:14px;padding:1.6rem;margin-top:2rem;text-align:center;}
+.calc-cta p{color:var(--white);margin-bottom:1rem;font-size:0.95rem;}
+.calc-cta-btn{display:inline-block;background:var(--white);color:var(--coral);padding:0.75rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;}
+.calc-disclaimer{font-size:0.78rem;color:var(--muted);text-align:center;margin-top:1rem;}
+
+/* Email gate (shared by calculators AND simple resource downloads) */
+.calc-gate{text-align:center;max-width:440px;margin:0 auto;}
+.calc-gate-icon{font-size:2.2rem;margin-bottom:0.8rem;}
+.calc-gate h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);margin-bottom:0.7rem;}
+.calc-gate p{color:var(--muted);font-size:0.95rem;margin-bottom:1.3rem;line-height:1.6;}
+.calc-gate-email{width:100%;padding:0.85rem 1.1rem;border:1.5px solid #e0d8ce;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.95rem;margin-bottom:1rem;outline:none;box-sizing:border-box;}
+.calc-gate-email:focus{border-color:var(--coral);}
+.calc-btn-primary{background:var(--coral);color:var(--white);border:none;padding:0.9rem 2rem;border-radius:8px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:'Inter',sans-serif;transition:background .2s;width:100%;}
+.calc-btn-primary:hover{background:var(--coral-light);}
+.calc-gate-note{font-size:0.78rem;color:var(--muted);margin-top:1rem;}
+
+@media(max-width:768px){
+  .calc-grid{grid-template-columns:1fr;}
+  .calc-container{padding:1.5rem;}
+}
+</style>
+
+<script>
+// === INVESTMENT CALCULATOR EMAIL GATE ===
+function icGateSubmit(event) {
+  event.preventDefault();
+  const email = document.getElementById('ic-gate-email').value.trim();
+  const btn = document.getElementById('ic-gate-btn');
+  btn.textContent = 'Unlocking...';
+  btn.disabled = true;
+
+  const formData = new URLSearchParams();
+  formData.append('fields[email]', email);
+  formData.append('ml-submit', '1');
+  formData.append('anticsrf', 'true');
+
+  fetch('https://assets.mailerlite.com/jsonp/2556872/forms/196535689954722851/subscribe', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: formData.toString()
+  }).catch(() => {})
+    .finally(() => {
+      document.getElementById('ic-gate').style.display = 'none';
+      document.getElementById('ic-tool').style.display = 'block';
+      icCalculate();
+    });
+  return false;
+}
+
+// === INVESTMENT CALCULATOR LOGIC ===
+function icCalculate() {
+  const initial = parseFloat(document.getElementById('ic-initial').value) || 0;
+  const monthly = parseFloat(document.getElementById('ic-monthly').value) || 0;
+  const duration = Math.max(1, parseInt(document.getElementById('ic-duration').value) || 1);
+  const annualReturn = parseFloat(document.getElementById('ic-return').value) || 0;
+  const r = (annualReturn / 100) / 12;
+
+  const maxYears = Math.max(30, duration);
+  let tableRows = '';
+
+  for (let year = 1; year <= maxYears; year++) {
+    const contribYears = Math.min(year, duration);
+    const n = contribYears * 12;
+    let value;
+    if (r === 0) {
+      value = initial + monthly * n;
+    } else {
+      value = initial * Math.pow(1 + r, n) + monthly * ((Math.pow(1 + r, n) - 1) / r);
+    }
+    if (year > duration) {
+      const extraMonths = (year - duration) * 12;
+      value = value * Math.pow(1 + r, extraMonths);
+    }
+    const cumulativeContributed = initial + monthly * 12 * contribYears;
+    const annualContribution = year <= duration ? monthly * 12 : 0;
+    const interestEarned = value - cumulativeContributed;
+
+    tableRows += `<tr>
+      <td>${year}</td>
+      <td>$${annualContribution.toLocaleString(undefined, {minimumFractionDigits:0, maximumFractionDigits:0})}</td>
+      <td>$${cumulativeContributed.toLocaleString(undefined, {minimumFractionDigits:0, maximumFractionDigits:0})}</td>
+      <td>$${value.toLocaleString(undefined, {minimumFractionDigits:0, maximumFractionDigits:0})}</td>
+      <td>$${interestEarned.toLocaleString(undefined, {minimumFractionDigits:0, maximumFractionDigits:0})}</td>
+    </tr>`;
+  }
+
+  const n = duration * 12;
+  let finalValue, finalContrib;
+  if (r === 0) {
+    finalValue = initial + monthly * n;
+  } else {
+    finalValue = initial * Math.pow(1 + r, n) + monthly * ((Math.pow(1 + r, n) - 1) / r);
+  }
+  finalContrib = initial + monthly * 12 * duration;
+  const totalInterest = finalValue - finalContrib;
+  const roi = finalContrib > 0 ? (totalInterest / finalContrib) * 100 : 0;
+
+  document.getElementById('ic-total-contrib').textContent = '$' + finalContrib.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+  document.getElementById('ic-future-value').textContent = '$' + finalValue.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+  document.getElementById('ic-interest').textContent = '$' + totalInterest.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+  document.getElementById('ic-roi').textContent = roi.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2}) + '%';
+  document.getElementById('ic-table-body').innerHTML = tableRows;
+}
+</script>
+<!-- ============ END INVESTMENT CALCULATOR SECTION ============ -->
+
+
+<!-- ============================================= -->
+<!-- TIME VALUE OF MONEY (PURCHASING POWER) CALC v2 -->
+<!-- WITH EMAIL GATE - REPLACES the previous        -->
+<!-- time-value-calculator-snippet.html entirely    -->
+<!-- Relies on shared .calc-* CSS already added by  -->
+<!-- the Investment Calculator snippet above it     -->
+<!-- ============================================= -->
+<section id="time-value-calculator">
+  <p class="section-tag">Free Interactive Tool</p>
+  <h2>Time Value of Money<br/>Calculator</h2>
+  <p class="section-intro">See what today's money will really be worth in the future, once inflation quietly erodes its purchasing power.</p>
+
+  <div class="calc-container">
+
+    <!-- EMAIL GATE -->
+    <div class="calc-gate" id="tv-gate">
+      <div class="calc-gate-icon">🔒</div>
+      <h3>Unlock the Time Value Calculator</h3>
+      <p>Enter your email for instant free access to this tool.</p>
+      <form onsubmit="return tvGateSubmit(event)">
+        <input type="email" id="tv-gate-email" class="calc-gate-email" placeholder="Your email address" required/>
+        <button type="submit" class="calc-btn-primary" id="tv-gate-btn">Unlock Calculator →</button>
+      </form>
+      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+    </div>
+
+    <!-- CALCULATOR (hidden until email submitted) -->
+    <div id="tv-tool" style="display:none;">
+      <div class="calc-grid">
+        <!-- INPUTS -->
+        <div class="calc-inputs">
+          <h3 class="calc-panel-title">Your Inputs</h3>
+          <div class="calc-field">
+            <label>Today's Amount ($)</label>
+            <input type="number" id="tv-amount" value="1000" min="0" oninput="tvCalculate()">
+          </div>
+          <div class="calc-field">
+            <label>Future Year</label>
+            <input type="number" id="tv-year" value="2035" min="2027" max="2100" oninput="tvCalculate()">
+          </div>
+          <div class="calc-field">
+            <label>Annual Inflation Rate (%)</label>
+            <input type="number" id="tv-inflation" value="4" min="0" max="20" step="0.1" oninput="tvCalculate()">
+            <span class="calc-hint">Bank of Canada long-run estimate ~2–4%</span>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="calc-results">
+          <h3 class="calc-panel-title">Your Results</h3>
+          <div class="calc-result-row">
+            <span>Number of Years</span>
+            <strong id="tv-years">0 yrs</strong>
+          </div>
+          <div class="calc-result-row calc-result-highlight">
+            <span>Purchasing Power in Future</span>
+            <strong id="tv-future-power">$0</strong>
+          </div>
+          <div class="calc-result-row">
+            <span>Loss of Purchasing Power</span>
+            <strong id="tv-loss">$0</strong>
+          </div>
+          <div class="calc-result-row">
+            <span>Purchasing Power Lost</span>
+            <strong id="tv-loss-pct">0%</strong>
+          </div>
+          <div class="calc-result-row">
+            <span>Amount Needed to Match Today's Value</span>
+            <strong id="tv-needed">$0</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- EROSION TABLE -->
+      <h3 class="calc-panel-title" style="margin-top:2rem;">30-Year Purchasing Power Erosion</h3>
+      <div class="calc-table-wrap">
+        <table class="calc-table" id="tv-table">
+          <thead>
+            <tr><th>Year</th><th>Calendar Year</th><th>Purchasing Power</th><th>Value Lost</th><th>% of Original Value</th></tr>
+          </thead>
+          <tbody id="tv-table-body"></tbody>
+        </table>
+      </div>
+
+      <div class="calc-cta">
+        <p>Want a strategy that keeps you ahead of inflation?</p>
+        <a href="https://cal.com/roli-finance-coach" target="_blank" rel="noopener" class="calc-cta-btn">Book a Free Consultation →</a>
+      </div>
+      <p class="calc-disclaimer">For illustrative purposes only. Actual inflation varies. Contact rolifinancecoach@gmail.com for personalized advice.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+// === TIME VALUE CALCULATOR EMAIL GATE ===
+function tvGateSubmit(event) {
+  event.preventDefault();
+  const email = document.getElementById('tv-gate-email').value.trim();
+  const btn = document.getElementById('tv-gate-btn');
+  btn.textContent = 'Unlocking...';
+  btn.disabled = true;
+
+  const formData = new URLSearchParams();
+  formData.append('fields[email]', email);
+  formData.append('ml-submit', '1');
+  formData.append('anticsrf', 'true');
+
+  fetch('https://assets.mailerlite.com/jsonp/2556872/forms/196535954298635830/subscribe', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: formData.toString()
+  }).catch(() => {})
+    .finally(() => {
+      document.getElementById('tv-gate').style.display = 'none';
+      document.getElementById('tv-tool').style.display = 'block';
+      tvCalculate();
+    });
+  return false;
+}
+
+// === TIME VALUE CALCULATOR LOGIC ===
+function tvCalculate() {
+  const amount = parseFloat(document.getElementById('tv-amount').value) || 0;
+  const futureYear = parseInt(document.getElementById('tv-year').value) || new Date().getFullYear();
+  const inflation = parseFloat(document.getElementById('tv-inflation').value) || 0;
+  const rate = inflation / 100;
+
+  const currentYear = new Date().getFullYear();
+  const years = Math.max(0, futureYear - currentYear);
+
+  const purchasingPower = amount / Math.pow(1 + rate, years);
+  const loss = amount - purchasingPower;
+  const lossPct = amount > 0 ? (loss / amount) * 100 : 0;
+  const amountNeeded = amount * Math.pow(1 + rate, years);
+
+  document.getElementById('tv-years').textContent = years + ' yrs';
+  document.getElementById('tv-future-power').textContent = '$' + purchasingPower.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+  document.getElementById('tv-loss').textContent = '$' + loss.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+  document.getElementById('tv-loss-pct').textContent = lossPct.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2}) + '%';
+  document.getElementById('tv-needed').textContent = '$' + amountNeeded.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+
+  let tableRows = '';
+  for (let y = 1; y <= 30; y++) {
+    const pp = amount / Math.pow(1 + rate, y);
+    const lost = amount - pp;
+    const pctOriginal = amount > 0 ? (pp / amount) * 100 : 0;
+    tableRows += `<tr>
+      <td>${y}</td>
+      <td>${currentYear + y}</td>
+      <td>$${pp.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
+      <td>$${lost.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2})}</td>
+      <td>${pctOriginal.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2})}%</td>
+    </tr>`;
+  }
+  document.getElementById('tv-table-body').innerHTML = tableRows;
+}
+</script>
+<!-- ============ END TIME VALUE CALCULATOR SECTION ============ -->
+
+
+<!-- ============================================= -->
+<!-- FOUR GATED DOWNLOAD RESOURCES                  -->
+<!-- FHSA Guide, Starter Guide, Budget Template,    -->
+<!-- Cash Flow Kit - each a self-contained section  -->
+<!-- Relies on shared .calc-gate / .calc-btn-primary -->
+<!-- CSS already added by the Investment Calculator -->
+<!-- ============================================= -->
+
+<!-- FHSA GUIDE -->
+<section id="fhsa-guide">
+  <p class="section-tag">Free Resource</p>
+  <h2>The FHSA Guide</h2>
+  <p class="section-intro">Canada's best-kept secret for first-time home buyers — how the First Home Savings Account works, step by step.</p>
+  <div class="calc-container" style="max-width:600px;">
+    <div class="calc-gate" id="rg-gate-fhsa">
+      <div class="calc-gate-icon">🏠</div>
+      <h3>Get Instant Access</h3>
+      <p>Enter your email to receive the free FHSA Guide (PDF).</p>
+      <form onsubmit="return rgSubmit('fhsa', event)">
+        <input type="email" id="rg-email-fhsa" class="calc-gate-email" placeholder="Your email address" required/>
+        <button type="submit" class="calc-btn-primary" id="rg-btn-fhsa">Get the FHSA Guide →</button>
+      </form>
+      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+    </div>
+    <div class="rg-result" id="rg-result-fhsa" style="display:none;">
+      <div class="calc-gate-icon">✅</div>
+      <h3>You're In!</h3>
+      <p>Click below to download your free FHSA Guide.</p>
+      <a href="FHSA_Guide.pdf" download class="calc-cta-btn" style="background:var(--coral);color:var(--white);">Download FHSA Guide (PDF) →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STARTER GUIDE -->
+<section id="starter-guide">
+  <p class="section-tag">Free Resource</p>
+  <h2>Canadian Financial<br/>Starter Guide</h2>
+  <p class="section-intro">Practical steps to take control of your money, understand your Canadian accounts, and start building wealth with confidence.</p>
+  <div class="calc-container" style="max-width:600px;">
+    <div class="calc-gate" id="rg-gate-starter">
+      <div class="calc-gate-icon">📘</div>
+      <h3>Get Instant Access</h3>
+      <p>Enter your email to receive the free Starter Guide (PDF).</p>
+      <form onsubmit="return rgSubmit('starter', event)">
+        <input type="email" id="rg-email-starter" class="calc-gate-email" placeholder="Your email address" required/>
+        <button type="submit" class="calc-btn-primary" id="rg-btn-starter">Get the Starter Guide →</button>
+      </form>
+      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+    </div>
+    <div class="rg-result" id="rg-result-starter" style="display:none;">
+      <div class="calc-gate-icon">✅</div>
+      <h3>You're In!</h3>
+      <p>Click below to download your free Starter Guide.</p>
+      <a href="Canadian_Financial_Starter_Guide.pdf" download class="calc-cta-btn" style="background:var(--coral);color:var(--white);">Download Starter Guide (PDF) →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BUDGET TEMPLATE -->
+<section id="budget-template">
+  <p class="section-tag">Free Resource</p>
+  <h2>Simple Monthly<br/>Budget Template</h2>
+  <p class="section-intro">A clean, easy-to-use Google Sheet to track your income and expenses every month — no formulas to set up, just fill it in.</p>
+  <div class="calc-container" style="max-width:600px;">
+    <div class="calc-gate" id="rg-gate-budget">
+      <div class="calc-gate-icon">📊</div>
+      <h3>Get Instant Access</h3>
+      <p>Enter your email to receive your own copy of the Budget Template.</p>
+      <form onsubmit="return rgSubmit('budget', event)">
+        <input type="email" id="rg-email-budget" class="calc-gate-email" placeholder="Your email address" required/>
+        <button type="submit" class="calc-btn-primary" id="rg-btn-budget">Get the Budget Template →</button>
+      </form>
+      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+    </div>
+    <div class="rg-result" id="rg-result-budget" style="display:none;">
+      <div class="calc-gate-icon">✅</div>
+      <h3>You're In!</h3>
+      <p>Click below to get your own personal copy of the Budget Template.</p>
+      <a href="https://docs.google.com/spreadsheets/d/1DhC3ohwXv0pEfVNBgxGCJ56mKclnaNsc9CgdC5sXhUg/copy" target="_blank" rel="noopener" class="calc-cta-btn" style="background:var(--coral);color:var(--white);">Get Your Copy of the Budget Template →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CASH FLOW KIT -->
+<section id="cashflow-kit">
+  <p class="section-tag">Free Resource</p>
+  <h2>5-Day Cash Flow<br/>Rescue Kit</h2>
+  <p class="section-intro">A 3-part interactive Google Sheet: your Money Map budget tracker, a Stop the Leak checklist, and a 5-day action plan.</p>
+  <div class="calc-container" style="max-width:600px;">
+    <div class="calc-gate" id="rg-gate-cashflow">
+      <div class="calc-gate-icon">💰</div>
+      <h3>Get Instant Access</h3>
+      <p>Enter your email to receive your own copy of the Cash Flow Rescue Kit.</p>
+      <form onsubmit="return rgSubmit('cashflow', event)">
+        <input type="email" id="rg-email-cashflow" class="calc-gate-email" placeholder="Your email address" required/>
+        <button type="submit" class="calc-btn-primary" id="rg-btn-cashflow">Get the Cash Flow Kit →</button>
+      </form>
+      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+    </div>
+    <div class="rg-result" id="rg-result-cashflow" style="display:none;">
+      <div class="calc-gate-icon">✅</div>
+      <h3>You're In!</h3>
+      <p>Click below to get your own personal copy of the Cash Flow Rescue Kit.</p>
+      <a href="https://docs.google.com/spreadsheets/d/1syLD2t0Uc1ysldRcegX3tUBvDXqLnOxCtMjnGoFQHrU/copy" target="_blank" rel="noopener" class="calc-cta-btn" style="background:var(--coral);color:var(--white);">Get Your Copy of the Cash Flow Kit →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.rg-result{text-align:center;}
+.rg-result h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);margin-bottom:0.7rem;}
+.rg-result p{color:var(--muted);font-size:0.95rem;margin-bottom:1.3rem;}
+</style>
+
+<script>
+// === GENERIC RESOURCE GATE (FHSA, Starter Guide, Budget Template, Cash Flow Kit) ===
+const rgFormActions = {
+  fhsa: 'https://assets.mailerlite.com/jsonp/2556872/forms/196536745454470188/subscribe',
+  starter: 'https://assets.mailerlite.com/jsonp/2556872/forms/196536303970420016/subscribe',
+  budget: 'https://assets.mailerlite.com/jsonp/2556872/forms/196536438941026004/subscribe',
+  cashflow: 'https://assets.mailerlite.com/jsonp/2556872/forms/196627671136864025/subscribe'
+};
+
+function rgSubmit(key, event) {
+  event.preventDefault();
+  const email = document.getElementById('rg-email-' + key).value.trim();
+  const btn = document.getElementById('rg-btn-' + key);
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+
+  const formData = new URLSearchParams();
+  formData.append('fields[email]', email);
+  formData.append('ml-submit', '1');
+  formData.append('anticsrf', 'true');
+
+  fetch(rgFormActions[key], {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: formData.toString()
+  }).catch(() => {})
+    .finally(() => {
+      document.getElementById('rg-gate-' + key).style.display = 'none';
+      document.getElementById('rg-result-' + key).style.display = 'block';
+    });
+  return false;
+}
+</script>
+<!-- ============ END 4 GATED DOWNLOAD RESOURCES ============ -->
+
+
 
 <!-- LEAD MAGNET / FUNNEL -->
 <section id="freeguide">
@@ -709,24 +1370,28 @@ function fbsRestart() {
 <section id="blog">
   <p class="section-tag">Insights & Tips</p>
   <h2>The Finance Coach Blog</h2>
-  <p class="section-intro">Practical financial insights for Canadians — from smart money habits to investment strategies. New posts coming soon.</p>
+  <p class="section-intro">Practical financial insights for Canadians — from smart money habits to investment strategies.</p>
   <div class="blog-grid">
     <div class="blog-card">
-      <div class="blog-thumb">📝<div class="blog-thumb-label">Coming Soon</div></div>
+      <div class="blog-thumb" style="background-image:url('blog-tfsa-vs-rrsp.jpg');background-size:cover;background-position:center;">
+      </div>
       <div class="blog-body">
         <div class="blog-cat">Investing Basics</div>
         <h3>TFSA vs RRSP: Which One Is Right for You?</h3>
         <p>Understanding the difference between these two accounts is one of the most important steps in your Canadian financial journey.</p>
-        <div class="blog-meta">Coming Soon · 5 min read</div>
+        <div class="blog-meta">5 min read</div>
+        <button class="blog-read-more-btn" onclick="openBlogModal('tfsa-vs-rrsp')">Read Full Article →</button>
       </div>
     </div>
     <div class="blog-card">
-      <div class="blog-thumb">💡<div class="blog-thumb-label">Coming Soon</div></div>
+      <div class="blog-thumb" style="background-image:url('blog-money-habits.jpg');background-size:cover;background-position:center;">
+      </div>
       <div class="blog-body">
         <div class="blog-cat">Budgeting</div>
         <h3>5 Money Habits That Will Change Your Financial Life</h3>
         <p>Small, consistent habits compound over time. Here are five simple shifts that can have a big impact on your financial future.</p>
-        <div class="blog-meta">Coming Soon · 4 min read</div>
+        <div class="blog-meta">5 min read</div>
+        <button class="blog-read-more-btn" onclick="openBlogModal('money-habits')">Read Full Article →</button>
       </div>
     </div>
     <div class="blog-coming">
@@ -746,7 +1411,7 @@ function fbsRestart() {
     <div class="contact-info">
       <p>Book a free, no-obligation consultation and let's talk about where you are today and where you want to be. There's no pressure — just an honest conversation about your financial goals.</p>
       <div class="contact-detail"><span>📍</span><span>Canada</span></div>
-      <div class="contact-detail"><span>📧</span><span>hello@rolifinancecoach.com</span></div>
+      <div class="contact-detail"><span>📧</span><span>rolifinancecoach@gmail.com</span></div>
       <div class="contact-detail"><span>📅</span><span>Free 30-minute consultations available</span></div>
       <br/>
       <p style="font-size:0.85rem;color:var(--muted);font-style:italic;">💬 Have a quick question? Use the chat button in the bottom-right corner — my AI assistant is available 24/7.</p>
@@ -848,7 +1513,7 @@ Key facts:
 - Her approach is client-first and fiduciary — she puts clients' best interests above all else
 - She offers free 30-minute consultations with no obligation
 - She explains complex topics in plain language — no jargon
-- Visitors can book via the contact form or email hello@rolifinancecoach.com
+- Visitors can book via the contact form or email rolifinancecoach@gmail.com
 - There is a free Canadian Financial Starter Guide available — visitors can get it by signing up in the Free Resource section
 - She builds long-term relationships with clients, not one-time transactions
 
@@ -887,13 +1552,13 @@ async function sendMsg(){
       })
     });
     const data = await res.json();
-    const reply = data.content?.[0]?.text || "I'm not sure about that — please reach out to Roli directly at hello@rolifinancecoach.com!";
+    const reply = data.content?.[0]?.text || "I'm not sure about that — please reach out to Roli directly at rolifinancecoach@gmail.com!";
     chatHistory.push({role:'assistant', content: reply});
     document.getElementById('typing').remove();
     msgs.innerHTML += `<div class="msg bot">${escHtml(reply)}</div>`;
   } catch(e) {
     document.getElementById('typing').remove();
-    msgs.innerHTML += `<div class="msg bot">Sorry, I'm having trouble connecting right now. Please email hello@rolifinancecoach.com directly!</div>`;
+    msgs.innerHTML += `<div class="msg bot">Sorry, I'm having trouble connecting right now. Please email rolifinancecoach@gmail.com directly!</div>`;
   }
   msgs.scrollTop = msgs.scrollHeight;
 }
@@ -916,5 +1581,160 @@ function handleFunnelSubmit(){
   document.getElementById('funnel-email').value = '';
 }
 </script>
+
+<!-- ============================================= -->
+<!-- BLOG MODAL SYSTEM (shared by all blog posts)   -->
+<!-- ============================================= -->
+<div id="blog-modal-overlay" class="blog-modal-overlay" onclick="closeBlogModalOnOverlay(event)">
+  <div class="blog-modal">
+    <button class="blog-modal-close" onclick="closeBlogModal()">✕</button>
+    <div id="blog-modal-content" class="blog-modal-content"></div>
+  </div>
+</div>
+
+<style>
+/* === BLOG READ MORE + MODAL STYLES === */
+.blog-read-more-btn{background:none;border:none;color:var(--coral);font-weight:700;font-size:0.88rem;cursor:pointer;font-family:'Inter',sans-serif;padding:0;text-decoration:underline;}
+.blog-read-more-btn:hover{color:var(--coral-light);}
+
+.blog-modal-overlay{display:none;position:fixed;inset:0;background:rgba(11,31,58,0.75);z-index:3000;padding:2rem 1rem;overflow-y:auto;}
+.blog-modal-overlay.open{display:flex;justify-content:center;align-items:flex-start;}
+.blog-modal{background:var(--white);max-width:720px;width:100%;border-radius:16px;padding:2.5rem;position:relative;margin:2rem 0;}
+.blog-modal-close{position:absolute;top:1.2rem;right:1.2rem;background:var(--cream);border:none;width:36px;height:36px;border-radius:50%;font-size:1.1rem;cursor:pointer;color:var(--navy);}
+.blog-modal-close:hover{background:var(--coral-pale);color:var(--coral);}
+.blog-modal-content img{width:100%;border-radius:12px;margin-bottom:1.5rem;}
+.blog-modal-content .blog-modal-cat{font-size:0.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--coral);margin-bottom:0.6rem;}
+.blog-modal-content h2{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--navy);margin-bottom:1rem;line-height:1.3;}
+.blog-modal-content h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--navy);margin:1.6rem 0 0.6rem;}
+.blog-modal-content p{color:var(--muted);line-height:1.75;margin-bottom:1rem;font-size:0.97rem;}
+.blog-modal-content ul{margin:0 0 1rem 1.2rem;color:var(--muted);line-height:1.75;}
+.blog-modal-content li{margin-bottom:0.4rem;}
+.blog-modal-cta{background:var(--coral-pale);border-radius:10px;padding:1.2rem 1.5rem;margin-top:1.5rem;text-align:center;}
+.blog-modal-cta a{color:var(--coral);font-weight:700;text-decoration:none;}
+@media(max-width:768px){
+  .blog-modal{padding:1.6rem;margin:1rem 0;}
+  .blog-modal-content h2{font-size:1.4rem;}
+}
+</style>
+
+<script>
+// === BLOG MODAL LOGIC ===
+const blogPosts = {
+  'money-habits': {
+    image: 'blog-money-habits.jpg',
+    category: 'Budgeting',
+    title: '5 Money Habits That Will Change Your Financial Life',
+    html: `
+      <p>When it comes to building long-term wealth, most people assume they need a massive salary, a surprise inheritance, or a lucky stock pick. In reality, financial success is rarely about one dramatic win. It is almost always the result of small, intentional daily decisions.</p>
+      <p>Just like compound interest works on your savings, compound behavior works on your financial well-being. By adopting a few simple routines, you can completely transform your relationship with money over time.</p>
+      <p>Here are five practical money habits that can dramatically shift your financial future.</p>
+
+      <h3>1. Pay Yourself First (Automate Your Savings)</h3>
+      <p>Most people follow a financial formula that looks like this: Income − Expenses = Savings.</p>
+      <p>The problem with this approach is simple: after paying bills, dining out, and covering daily costs, there is rarely anything left over.</p>
+      <p>Flip the formula on its head: Income − Savings = Expenses.</p>
+      <p>Set up automatic transfers on payday to move a predetermined amount — whether it's $50, $200, or $500 — directly into your investment or high-interest savings accounts before you ever get the chance to spend it. If you don't see it in your checking account, you won't miss it.</p>
+
+      <h3>2. Give Every Dollar a Target Purpose</h3>
+      <p>Floating through the month without a clear framework for your cash flow is like driving without a map — you might get somewhere, but probably not where you intended.</p>
+      <p>You don't need a restrictive, rigid budget to stay on track. Try a high-level structure like the 50/30/20 Rule:</p>
+      <ul>
+        <li><strong>50% for Needs:</strong> Rent/mortgage, utilities, groceries, transportation, and minimum debt payments.</li>
+        <li><strong>30% for Wants:</strong> Dining out, travel, hobbies, and entertainment.</li>
+        <li><strong>20% for Future You:</strong> Investments, savings, and debt payoff above the minimums.</li>
+      </ul>
+      <p>Assigning every dollar a job keeps you in control while still giving you the freedom to enjoy life today.</p>
+
+      <h3>3. Track Your Net Worth, Not Just Your Income</h3>
+      <p>Income measures how much money flows through your hands; net worth measures how much of it you actually keep.</p>
+      <p>Net Worth = Total Assets (what you own) − Total Liabilities (what you owe)</p>
+      <p>A person earning $150,000 who spends $155,000 every year is in a much more fragile position than someone earning $60,000 who consistently invests $10,000.</p>
+      <p>Checking your net worth once a quarter gives you a bird's-eye view of your true financial health and provides immediate positive feedback as your debt shrinks and your investments grow.</p>
+
+      <h3>4. Build an Emergency "Peace of Mind" Buffer</h3>
+      <p>Unexpected expenses — a major car repair, home maintenance, or a sudden change in income — are a guaranteed part of life. Without a dedicated cash cushion, these moments often turn into high-interest credit card debt or forced sales of investments at the wrong time.</p>
+      <p>Aim to accumulate 3 to 6 months of essential living expenses in a high-interest savings account (HISA) or a Tax-Free Savings Account (TFSA) holding cash/cash equivalents. This fund isn't meant to make you rich; it's designed to give you resilience and eliminate financial stress.</p>
+
+      <h3>5. Invest Early, Consistently, and Passively</h3>
+      <p>Trying to time the stock market or search for the "next big thing" is a stress-inducing game that even professionals struggle to win.</p>
+      <p>Instead, lean on the power of dollar-cost averaging. By investing a fixed amount regularly into broad-market index funds or diversified portfolios, you naturally buy more shares when prices are low and fewer when prices are high.</p>
+      <p>Time in the market beats timing the market every single time. The earlier you start, the more heavy lifting compound interest will do for you.</p>
+
+      <h3>The Takeaway</h3>
+      <p>You don't need to implement all five changes overnight. Pick one habit that resonates with you today — whether that's setting up an automated $50 transfer or calculating your current net worth — and build from there. Small, consistent shifts always yield massive long-term results.</p>
+    `
+  },
+  'tfsa-vs-rrsp': {
+    image: 'blog-tfsa-vs-rrsp.jpg',
+    category: 'Investing Basics',
+    title: 'TFSA vs. RRSP: Which One Is Right for You?',
+    html: `
+      <p>Understanding the difference between a Tax-Free Savings Account (TFSA) and a Registered Retirement Savings Plan (RRSP) is one of the most critical steps in your Canadian financial journey. While both accounts allow your money to grow tax-sheltered, they serve very different purposes depending on where you are in life, your current income, and your long-term goals.</p>
+      <p>Here is a simple, straightforward breakdown of how each works — and how to choose the right strategy for your money.</p>
+
+      <h3>The Basics: How They Compare</h3>
+      <p>Think of the primary distinction this way: an RRSP gives you a tax break today, but you pay tax when you take the money out later. A TFSA gives you no tax break today, but every dollar — including all growth and gains — comes out 100% tax-free whenever you need it.</p>
+      <p><em>Exceptions apply for specific government programs like the Home Buyers' Plan (HBP) or Lifelong Learning Plan (LLP).</em></p>
+
+      <h3>When to Prioritize the TFSA</h3>
+      <p>Despite its name, a TFSA isn't just a basic savings account — it's an investment account where stocks, ETFs, mutual funds, and GICs can compound without ever being taxed.</p>
+      <p>The TFSA is likely your best starting point if:</p>
+      <ul>
+        <li><strong>You earn less than ~$53,000–$55,000 per year:</strong> If you are early in your career or currently in a lower tax bracket, saving tax deductions for higher-earning years is often smarter.</li>
+        <li><strong>You want flexibility:</strong> Whether you're saving for an emergency fund, a home down payment, or a major purchase, you can withdraw from a TFSA anytime without tax penalties or losing your contribution space permanently.</li>
+        <li><strong>You've maxed out your RRSP:</strong> Once your retirement accounts are topped up, the TFSA offers unlimited tax-free growth potential for secondary goals.</li>
+      </ul>
+
+      <h3>When to Prioritize the RRSP</h3>
+      <p>An RRSP is designed explicitly as a long-term retirement engine. The money you deposit reduces your net income for the year, often resulting in a sizable tax refund.</p>
+      <p>The RRSP should be your top priority if:</p>
+      <ul>
+        <li><strong>You are in a high tax bracket:</strong> The core strategy is to contribute when your tax rate is high, and withdraw in retirement when your income (and tax bracket) is lower.</li>
+        <li><strong>Your employer offers a matching program:</strong> If your employer matches your group RRSP contributions, take it immediately — that is effectively a 100% return on your money before market growth.</li>
+        <li><strong>You plan to buy your first home or return to school:</strong> Programs like the Home Buyers' Plan (HBP) allow you to borrow up to $60,000 tax-free from your RRSP to buy a home, repaid over 15 years.</li>
+      </ul>
+
+      <h3>The Golden Rule: Tax Bracket Comparison</h3>
+      <p>If you want a simple formula to make your decision, compare your tax bracket today versus what you expect it to be when you withdraw the money:</p>
+      <ul>
+        <li>Current tax bracket <strong>higher than</strong> expected retirement tax bracket → Choose RRSP</li>
+        <li>Current tax bracket <strong>lower than</strong> expected retirement tax bracket → Choose TFSA</li>
+      </ul>
+
+      <h3>The Ultimate Strategy: Combine Both</h3>
+      <p>You don't actually have to pick just one. A highly effective wealth-building strategy for middle-to-high earners is to contribute to your RRSP, take the resulting tax refund, and re-invest it directly into your TFSA. This maximizes both immediate tax relief and long-term tax-free compounding.</p>
+    `
+  }
+};
+
+function openBlogModal(postKey) {
+  const post = blogPosts[postKey];
+  if (!post) return;
+  const content = document.getElementById('blog-modal-content');
+  content.innerHTML = `
+    <img src="${post.image}" alt="${post.title}">
+    <div class="blog-modal-cat">${post.category}</div>
+    <h2>${post.title}</h2>
+    ${post.html}
+    <div class="blog-modal-cta">
+      <p style="margin-bottom:0.5rem;">Still unsure which strategy best fits your unique financial picture?</p>
+      <a href="https://cal.com/roli-finance-coach" target="_blank" rel="noopener">Book a Call to Get Started →</a>
+    </div>
+  `;
+  document.getElementById('blog-modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeBlogModal() {
+  document.getElementById('blog-modal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeBlogModalOnOverlay(event) {
+  if (event.target.id === 'blog-modal-overlay') closeBlogModal();
+}
+</script>
+<!-- ============ END BLOG MODAL SYSTEM ============ -->
+
 </body>
 </html>
