@@ -419,7 +419,7 @@ display:flex;align-items:center;justify-content:center;font-size:3rem;}
         <input type="email" id="rg-email-all" class="calc-gate-email" placeholder="Your email address" required/>
         <button type="submit" class="calc-btn-primary" id="rg-btn-all">Get All Free Resources →</button>
       </form>
-      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+      <p class="calc-gate-note">🔒 You'll also get Roli's Money Moves, my free monthly newsletter. No spam, ever. Unsubscribe anytime.</p>
     </div>
     <div class="rg-result" id="rg-result-all" style="display:none;">
       <div class="calc-gate-icon">✅</div>
@@ -528,7 +528,7 @@ function rgAllSubmit(event) {
         <input type="email" id="fbs-email-input" class="fbs-email-input" placeholder="Your email address" required/>
         <button type="submit" class="fbs-btn-primary" id="fbs-email-submit-btn">Reveal My Results →</button>
       </form>
-      <p class="fbs-privacy-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+      <p class="fbs-privacy-note">🔒 You'll also get Roli's Money Moves, my free monthly newsletter. No spam, ever. Unsubscribe anytime.</p>
     </div>
 
     <!-- RESULTS SCREEN -->
@@ -800,7 +800,7 @@ function fbsRestart() {
         <input type="email" id="ic-gate-email" class="calc-gate-email" placeholder="Your email address" required/>
         <button type="submit" class="calc-btn-primary" id="ic-gate-btn">Unlock Calculator →</button>
       </form>
-      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+      <p class="calc-gate-note">🔒 You'll also get Roli's Money Moves, my free monthly newsletter. No spam, ever. Unsubscribe anytime.</p>
     </div>
 
     <!-- CALCULATOR (hidden until email submitted) -->
@@ -1027,7 +1027,7 @@ function icCalculate() {
         <input type="email" id="tv-gate-email" class="calc-gate-email" placeholder="Your email address" required/>
         <button type="submit" class="calc-btn-primary" id="tv-gate-btn">Unlock Calculator →</button>
       </form>
-      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+      <p class="calc-gate-note">🔒 You'll also get Roli's Money Moves, my free monthly newsletter. No spam, ever. Unsubscribe anytime.</p>
     </div>
 
     <!-- CALCULATOR (hidden until email submitted) -->
@@ -1187,7 +1187,7 @@ function tvCalculate() {
         <input type="email" id="rg-email-fhsa" class="calc-gate-email" placeholder="Your email address" required/>
         <button type="submit" class="calc-btn-primary" id="rg-btn-fhsa">Get the FHSA Guide →</button>
       </form>
-      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+      <p class="calc-gate-note">🔒 You'll also get Roli's Money Moves, my free monthly newsletter. No spam, ever. Unsubscribe anytime.</p>
     </div>
     <div class="rg-result" id="rg-result-fhsa" style="display:none;">
       <div class="calc-gate-icon">✅</div>
@@ -1212,7 +1212,7 @@ function tvCalculate() {
         <input type="email" id="rg-email-starter" class="calc-gate-email" placeholder="Your email address" required/>
         <button type="submit" class="calc-btn-primary" id="rg-btn-starter">Get the Starter Guide →</button>
       </form>
-      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+      <p class="calc-gate-note">🔒 You'll also get Roli's Money Moves, my free monthly newsletter. No spam, ever. Unsubscribe anytime.</p>
     </div>
     <div class="rg-result" id="rg-result-starter" style="display:none;">
       <div class="calc-gate-icon">✅</div>
@@ -1237,7 +1237,7 @@ function tvCalculate() {
         <input type="email" id="rg-email-budget" class="calc-gate-email" placeholder="Your email address" required/>
         <button type="submit" class="calc-btn-primary" id="rg-btn-budget">Get the Budget Template →</button>
       </form>
-      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+      <p class="calc-gate-note">🔒 You'll also get Roli's Money Moves, my free monthly newsletter. No spam, ever. Unsubscribe anytime.</p>
     </div>
     <div class="rg-result" id="rg-result-budget" style="display:none;">
       <div class="calc-gate-icon">✅</div>
@@ -1262,7 +1262,7 @@ function tvCalculate() {
         <input type="email" id="rg-email-cashflow" class="calc-gate-email" placeholder="Your email address" required/>
         <button type="submit" class="calc-btn-primary" id="rg-btn-cashflow">Get the Cash Flow Kit →</button>
       </form>
-      <p class="calc-gate-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+      <p class="calc-gate-note">🔒 You'll also get Roli's Money Moves, my free monthly newsletter. No spam, ever. Unsubscribe anytime.</p>
     </div>
     <div class="rg-result" id="rg-result-cashflow" style="display:none;">
       <div class="calc-gate-icon">✅</div>
@@ -1328,7 +1328,7 @@ function rgSubmit(key, event) {
       <input type="email" placeholder="Your email address" id="funnel-email"/>
       <button onclick="handleFunnelSubmit()">Send Me the Guide →</button>
     </div>
-    <p class="funnel-note">🔒 No spam, ever. Unsubscribe anytime.</p>
+    <p class="funnel-note">🔒 You'll also get Roli's Money Moves, my free monthly newsletter. No spam, ever. Unsubscribe anytime.</p>
     <div class="funnel-benefits">
       <div class="funnel-benefit"><span>✓</span>Understand TFSAs, RRSPs & more</div>
       <div class="funnel-benefit"><span>✓</span>Build a simple budget that works</div>
@@ -1575,10 +1575,32 @@ function handleFunnelSubmit(){
     alert('Please enter your name and email address.');
     return;
   }
-  // TODO: Replace this with your email marketing integration (Mailchimp / ConvertKit / Zoho Campaigns)
-  alert(`Thanks ${name}! 🎉 Your free guide is on its way to ${email}. Check your inbox shortly!`);
-  document.getElementById('funnel-name').value = '';
-  document.getElementById('funnel-email').value = '';
+  const btn = document.querySelector('.funnel-form button');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  // Submit to MailerLite (Canadian Financial Starter Guide group)
+  const formData = new URLSearchParams();
+  formData.append('fields[name]', name);
+  formData.append('fields[email]', email);
+  formData.append('ml-submit', '1');
+  formData.append('anticsrf', 'true');
+
+  fetch('https://assets.mailerlite.com/jsonp/2556872/forms/196536303970420016/subscribe', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: formData.toString()
+  }).catch(() => {})
+    .finally(() => {
+      const safeName = name.replace(/[<>&"']/g, '');
+      document.querySelector('.funnel-form').innerHTML =
+        '<div style="text-align:center;color:var(--white);width:100%;">' +
+        '<p style="font-size:1.05rem;margin-bottom:1rem;">Thanks ' + safeName + '! 🎉 Your guide is ready.</p>' +
+        '<a href="Canadian_Financial_Starter_Guide.pdf" download style="display:inline-block;background:var(--coral);color:var(--white);padding:0.85rem 1.8rem;border-radius:8px;font-weight:700;text-decoration:none;">Download the Starter Guide (PDF) →</a>' +
+        '<p style="font-size:0.85rem;color:rgba(255,255,255,0.65);margin-top:1rem;">Please check your inbox to confirm your email.</p>' +
+        '</div>';
+    });
 }
 </script>
 
