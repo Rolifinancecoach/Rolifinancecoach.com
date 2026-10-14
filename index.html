@@ -159,6 +159,12 @@ display:flex;align-items:center;justify-content:center;font-size:3rem;}
   .form-note{font-size:0.78rem;color:var(--muted);margin-top:0.6rem;text-align:center;}
 
   /* FOOTER */
+  .social-links{display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:0.5rem;}
+  .social-links a{display:inline-flex;align-items:center;gap:0.5rem;padding:0.55rem 1rem;border-radius:999px;background:var(--navy);color:#fff;text-decoration:none;font-size:0.88rem;font-weight:500;transition:background .2s;}
+  .social-links a:hover{background:var(--coral);}
+  footer .social-links{justify-content:center;margin-top:1rem;}
+  @media(max-width:700px){footer{padding-bottom:6rem;}}
+  footer .social-links a{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);}
   footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:2.5rem 5%;font-size:0.85rem;}
   footer strong{color:var(--coral-light);}
   .footer-links{display:flex;gap:1.5rem;justify-content:center;margin-top:0.8rem;flex-wrap:wrap;}
@@ -1445,6 +1451,11 @@ function rgSubmit(key, event) {
       <div class="contact-detail"><span>📍</span><span>Canada</span></div>
       <div class="contact-detail"><span>📧</span><span>rolifinancecoach@gmail.com</span></div>
       <div class="contact-detail"><span>📅</span><span>Free 30-minute consultations available</span></div>
+      <p style="margin:1rem 0 0.25rem;font-weight:600;color:var(--text);">Follow for free money tips</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/rolifinancecoach/" target="_blank" rel="noopener" aria-label="Instagram @rolifinancecoach"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>@rolifinancecoach</span></a>
+        <a href="https://www.tiktok.com/@rolifinance" target="_blank" rel="noopener" aria-label="TikTok @rolifinance"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.4 2.1 1.8 3.6 4 3.8v3.1c-1.5 0-2.9-.4-4-1.2v6.6c0 3.4-2.6 5.7-5.8 5.7S5 18.7 5 15.5s2.8-5.9 6.3-5.6v3.2c-1.5-.3-3 .7-3 2.4 0 1.4 1.1 2.5 2.5 2.5s2.6-1 2.6-2.6V3h3.2z"/></svg><span>@rolifinance</span></a>
+      </div>
       <br/>
       <p style="font-size:0.85rem;color:var(--muted);font-style:italic;">💬 Have a quick question? Use the chat button in the bottom-right corner — my AI assistant is available 24/7.</p>
     </div>
@@ -1496,6 +1507,10 @@ function rgSubmit(key, event) {
     <a href="#blog">Blog</a>
     <a href="#freeguide">Free Guide</a>
     <a href="#contact">Contact</a>
+  </div>
+  <div class="social-links">
+    <a href="https://www.instagram.com/rolifinancecoach/" target="_blank" rel="noopener" aria-label="Instagram @rolifinancecoach"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>@rolifinancecoach</span></a>
+    <a href="https://www.tiktok.com/@rolifinance" target="_blank" rel="noopener" aria-label="TikTok @rolifinance"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.4 2.1 1.8 3.6 4 3.8v3.1c-1.5 0-2.9-.4-4-1.2v6.6c0 3.4-2.6 5.7-5.8 5.7S5 18.7 5 15.5s2.8-5.9 6.3-5.6v3.2c-1.5-.3-3 .7-3 2.4 0 1.4 1.1 2.5 2.5 2.5s2.6-1 2.6-2.6V3h3.2z"/></svg><span>@rolifinance</span></a>
   </div>
 </footer>
 
