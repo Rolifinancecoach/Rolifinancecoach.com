@@ -400,6 +400,11 @@ display:flex;align-items:center;justify-content:center;font-size:3rem;}
       <h3>Newcomer Tax &amp; Benefits Checklist</h3>
       <p>Your first-year tax and benefits steps.</p>
     </a>
+    <a href="#review-checklist" class="res-hub-card">
+      <div class="res-hub-icon">🗓️</div>
+      <h3>Twice-a-Year Money Review Checklist</h3>
+      <p>What to check in spring and fall to keep your plan on track.</p>
+    </a>
     <a href="#fhsa-guide" class="res-hub-card">
       <div class="res-hub-icon">🏠</div>
       <h3>FHSA Guide</h3>
@@ -427,7 +432,7 @@ display:flex;align-items:center;justify-content:center;font-size:3rem;}
     <div class="calc-gate" id="rg-gate-all">
       <div class="calc-gate-icon">🎁</div>
       <h3>Want Everything At Once?</h3>
-      <p>Enter your email once to unlock links to all 8 free tools and resources above.</p>
+      <p>Enter your email once to unlock links to all 9 free tools and resources above.</p>
       <form onsubmit="return rgAllSubmit(event)">
         <input type="email" id="rg-email-all" class="calc-gate-email" placeholder="Your email address" required/>
         <button type="submit" class="calc-btn-primary" id="rg-btn-all">Get All Free Resources →</button>
@@ -443,6 +448,7 @@ display:flex;align-items:center;justify-content:center;font-size:3rem;}
         <a href="#investment-calculator">📈 Investment Growth Calculator →</a>
         <a href="#time-value-calculator">⏳ Time Value of Money Calculator →</a>
         <a href="#tax-checklist">📝 Newcomer Tax &amp; Benefits Checklist →</a>
+        <a href="#review-checklist">🗓️ Twice-a-Year Money Review Checklist →</a>
         <a href="#fhsa-guide">🏠 FHSA Guide →</a>
         <a href="#starter-guide">📘 Canadian Financial Starter Guide →</a>
         <a href="#budget-template">📊 Simple Budget Template →</a>
@@ -1213,6 +1219,31 @@ function tvCalculate() {
   </div>
 </section>
 
+<!-- TWICE-A-YEAR MONEY REVIEW CHECKLIST -->
+<section id="review-checklist">
+  <p class="section-tag">Free Resource</p>
+  <h2>Twice-a-Year Money Review Checklist</h2>
+  <p class="section-intro">Your plan should change when your life does. Use this spring and fall checklist to review your budget, savings accounts, insurance, will and goals, with a log to track your progress.</p>
+  <div class="calc-container" style="max-width:600px;">
+    <div class="calc-gate" id="rg-gate-review">
+      <div class="calc-gate-icon">🗓️</div>
+      <h3>Get Instant Access</h3>
+      <p>Enter your email to receive the free Twice-a-Year Money Review Checklist (PDF).</p>
+      <form onsubmit="return rgSubmit('review', event)">
+        <input type="email" id="rg-email-review" class="calc-gate-email" placeholder="Your email address" required/>
+        <button type="submit" class="calc-btn-primary" id="rg-btn-review">Get the Checklist →</button>
+      </form>
+      <p class="calc-gate-note">🔒 You'll also get Roli's Money Moves, my free monthly newsletter. No spam, ever. Unsubscribe anytime.</p>
+    </div>
+    <div class="rg-result" id="rg-result-review" style="display:none;">
+      <div class="calc-gate-icon">✅</div>
+      <h3>You're In!</h3>
+      <p>Click below to download your free Twice-a-Year Money Review Checklist.</p>
+      <a href="Twice_a_Year_Money_Review_Checklist.pdf" download class="calc-cta-btn" style="background:var(--coral);color:var(--white);">Download the Checklist (PDF) →</a>
+    </div>
+  </div>
+</section>
+
 <section id="fhsa-guide">
   <p class="section-tag">Free Resource</p>
   <h2>The FHSA Guide</h2>
@@ -1323,6 +1354,7 @@ function tvCalculate() {
 const rgFormActions = {
   fhsa: 'https://assets.mailerlite.com/jsonp/2556872/forms/196536745454470188/subscribe',
   tax: 'https://assets.mailerlite.com/jsonp/2556872/forms/196532794742015035/subscribe',
+  review: 'https://assets.mailerlite.com/jsonp/2556872/forms/196532794742015035/subscribe',
   starter: 'https://assets.mailerlite.com/jsonp/2556872/forms/196536303970420016/subscribe',
   budget: 'https://assets.mailerlite.com/jsonp/2556872/forms/196536438941026004/subscribe',
   cashflow: 'https://assets.mailerlite.com/jsonp/2556872/forms/196627671136864025/subscribe'
